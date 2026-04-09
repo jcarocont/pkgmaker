@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pkgmaker <img src="icon/hexlogo.png" align="right" height="138" alt="pkgmaker logo" />
+# pkgmaker <img src="icon/hexlogo.png" align="right" height="180" alt="pkgmaker logo" />
 
 <!-- badges: start -->
 
