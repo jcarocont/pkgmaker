@@ -12,9 +12,9 @@ pkgmaker es una herramienta CLI minimalista para convertir un directorio de scri
 
 ## Instalación
 ``` bash
-git clone -b main https://github.com/jcarocont/pkgmaker.git
-cd pkgname
-./configscript.fish
+git clone -b sh-compatible https://github.com/jcarocont/pkgmaker.git
+cd pkgmaker
+./configscript.sh
 ```
 Asegúrate de que `~/.local/bin` esté en tu PATH.
 
