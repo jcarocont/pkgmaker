@@ -4,7 +4,7 @@
 <!-- badges: start -->
 ![status](https://img.shields.io/badge/status-experimental-orange)
 ![platform](https://img.shields.io/badge/platform-linux--only-lightgrey)
-![language](https://img.shields.io/badge/language-R%20%2B%20fish-blue)
+![language](https://img.shields.io/badge/language-R%20%2B%20sh-red)
 <!-- badges: end -->
 
 ## Descripción
