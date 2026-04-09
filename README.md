@@ -1,87 +1,89 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# pkgmaker <img src="icon/hexlogo.png" align="right" height="138" alt="pkgmaker logo" />
-
+# pkgmaker <img src="icon/hexlogo.png" align="right" height="180" alt="pkgmaker logo" />
+*transforma tus scripts a paquetes en r, con un archivo y 3 comandos*
 <!-- badges: start -->
-
 ![status](https://img.shields.io/badge/status-experimental-orange)
 ![platform](https://img.shields.io/badge/platform-linux--only-lightgrey)
 ![language](https://img.shields.io/badge/language-R%20%2B%20fish-blue)
-
 <!-- badges: end -->
 
-## Overview
+## Descripción
+pkgmaker es una herramienta CLI minimalista para convertir un directorio de scripts R en un paquete listo para usar. Diseñada para transformar el proceso lento y tedioso de desarrollar un paquete, en un workbench de prototipado: escribes los scripts, ejecutas un comando, y obtienes un paquete R válido con dependencias, documentación e instalado.
 
-pkgmaker is a minimal CLI tool to convert a directory of R scripts into a
-ready-to-build R package.
-
-It is designed for fast prototyping: you write scripts, run a command,
-and get a valid R package with dependencies, documentation, and install
-support.
-
-
-## Installation
-
+## Instalación
 ``` bash
 git clone https://github.com/jcarocont/pkgname.git
 cd pkgname
-./configscript.sh
+./configscript.fish
 ```
-Ensure `~/.local/bin` is in your PATH.
+Asegúrate de que `~/.local/bin` esté en tu PATH.
 
-## Usage
+## Uso
 
-### Assemble package (move scripts and structure folderss)
-
+### Ensamblar paquete (mover scripts y crear estructura)
 ``` bash
 pkgmaker nsmbl
 ```
-
-Ignore files:
-
+Ignorar archivos:
 ``` bash
 pkgmaker nsmbl --ignore file1 file2
 ```
 
-### Build package
-
+### autoconfigurar el paquete
 ``` bash
 pkgmaker build
 ```
 
-### Install package
-
+### Instalar paquete
 ``` bash
 pkgmaker install
 ```
 
-## deps.toml (optional)
+## deps.toml
+El archivo `deps.toml` permite configurar el paquete completo sin tocar el `DESCRIPTION` manualmente.
 
 ``` toml
+[package]
+name = "mypackage"
+version = "0.1.0"
+title = "Lo que hace el paquete"
+description = "Descripción más larga del paquete."
+license = "MIT"
+
+[authors]
+[[authors.person]]
+name = "Jane Doe"
+email = "jane@example.com"
+role = ["aut", "cre"]
+
+[[authors.person]]
+name = "John Doe"
+email = "john@example.com"
+role = ["aut"]
+
 [imports]
-dplyr >=1.1.0
-ggplot2 >=3.4.0
+dplyr >= 1.1.0
+ggplot2 >= 3.4.0
 data.table
 ```
 
-If not present, dependencies are inferred from `library()` / `require()`
-calls.
+Todos los campos son opcionales — si `name` no está presente se usa el `basename` del directorio. Si `deps.toml` no existe, las dependencias se infieren desde `library()` / `require()`.
 
-## Structure
-
-After `nsmbl`:
+## Estructura
+Después de `nsmbl`:
 
     .
     ├── R/
     ├── DESCRIPTION
     ├── NAMESPACE
     ├── man/
-    └── data/
+    ├── data/
+    └── deps.toml
 
-## Notes
+## Notas
+- Diseñado para acelerar el desarrollo
+- Sin dependencias de sistema más allá de R
+- Funciona bien en entornos Unix (Linux/macos)
 
--   Designed for quick package development
--   Little system dependencies beyond R, self config
--   Works well in Unix-like environments
 
 
