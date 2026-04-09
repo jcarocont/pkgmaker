@@ -11,9 +11,11 @@
 pkgmaker es una herramienta CLI minimalista para convertir un directorio de scripts R en un paquete listo para usar. Diseñada para transformar el proceso lento y tedioso de desarrollar un paquete, en un workbench de prototipado: escribes los scripts, ejecutas un comando, y obtienes un paquete R válido con dependencias, documentación e instalado.
 
 ## Instalación
+``` bash
 git clone -b main https://github.com/jcarocont/pkgmaker.git
 cd pkgmaker
 ./configscript.fish
+```
 
 Asegúrate de que `~/.local/bin` esté en tu PATH.
 
