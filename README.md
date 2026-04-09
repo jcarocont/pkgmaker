@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # pkgmaker <img src="icon/hexlogo.png" align="right" height="180" alt="pkgmaker logo" />
-
+*transforma tus scripts a paquetes en r, con un archivo y 3 comandos*
 <!-- badges: start -->
 
 ![status](https://img.shields.io/badge/status-experimental-orange)
