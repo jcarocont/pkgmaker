@@ -25,7 +25,7 @@ support.
 ``` bash
 git clone https://github.com/jcarocont/pkgname.git
 cd pkgname
-./configscript.fish
+./configscript.sh
 ```
 Ensure `~/.local/bin` is in your PATH.
 
@@ -80,10 +80,8 @@ After `nsmbl`:
 
 ## Notes
 
--   Designed for fast prototyping
--   No system dependencies beyond R
+-   Designed for quick package development
+-   Little system dependencies beyond R, self config
 -   Works well in Unix-like environments
--   NEEDs fish shell 
-
 
 
