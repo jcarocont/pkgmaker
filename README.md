@@ -29,7 +29,7 @@ Ignorar archivos:
 pkgmaker nsmbl --ignore file1 file2
 ```
 
-### Compilar paquete
+### autoconfigurar el paquete
 ``` bash
 pkgmaker build
 ```
